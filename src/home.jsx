@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
+
 function Home() {
+    function handle(){
+        let ans = document.getElementById('inp').value;
+        if (ans === "FLAG_53811586115"){
+            alert("Correct! You are a winner!")
+        }
+    }
 
     return (
         <>
@@ -14,7 +21,7 @@ function Home() {
                     of a sound approach,<br></br>
                     based on <i>insights,</i> and <i>experience.</i><br></br>
                     <input type="text" id="inp" name="lname"></input>
-                    <button className="btn"id="btn" type="submit" name="action">Submit
+                    <button className="btn" onClick={handle} type="submit" name="action">Submit
                     </button>
                 </h1>
                 <h4 className="team">explore our team members</h4>
